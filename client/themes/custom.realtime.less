@@ -1,0 +1,295 @@
+// THIS FILE IS GENERATED, DO NOT MODIFY IT!
+// It includes the bootstrap modules configured in client/themes/custom.realtime.json.
+// You may need to use 'meteor add nemo64:bootstrap' if the styles are not loaded.
+
+// If it throws errors your bootstrap.import.less is probably invalid.
+// To fix that remove that file and then recover your changes.
+
+@import "custom.realtime.import.less";
+
+
+// @import "theme/layout/footer/footer.less"
+/* Set the fixed height of the footer here */
+footer {
+  position:relative;
+  max-height: 135px;
+  height: 135px;
+  background-color: @navbar-inverse-bg;
+  padding-top: 10px;
+  z-index:-2;
+  a {
+    color:  contrast(@navbar-inverse-bg,darken(@text-color, 10%),lighten(@text-color, 20%));
+  }
+  .navbar-bottom {
+    position:fixed;
+    bottom:0px;
+    z-index:-1;
+    width:100%;
+  }
+}
+
+
+
+// @import "theme/layout/header/header.less"
+.navbar-shop {
+  background-color: @navbar-default-bg;
+  color: @navbar-default-link-color;
+  a, a:hover, a:focus, .dropdown-toggle {
+    color: @navbar-default-link-color;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.ltr({ 
+  // This is for making sure WebKit knows the "default" direction when switching back from RTL.
+  // It solves a bug where some of the elements stayed RTL because the Computed Style on Document still says direction: rtl
+  direction: ltr;
+});
+
+.rtl({
+  direction: rtl;
+  text-align: right;
+});
+
+.navbar-brand {
+  .margin-left(10px);
+}
+
+.navbar-cart {
+  .float(right);
+  position: relative;
+}
+
+.navbar-languages {
+  .float(right);
+  padding: @navbar-padding-vertical (@navbar-padding-horizontal * 2);
+  height: @navbar-height;
+  &:hover {
+    background-color: @navbar-default-toggle-icon-bar-bg;
+    border-color: @navbar-default-toggle-border-color;
+  }
+  .dropdown-menu {
+    margin-top: @navbar-padding-vertical;
+  }
+}
+
+.navbar-accounts {
+  .float(right);
+  height: @navbar-height;
+  padding: @navbar-padding-vertical;
+  .padding-left(@navbar-padding-vertical);
+
+  &:hover {
+    background-color: @navbar-default-toggle-icon-bar-bg;
+    border-color: @navbar-default-toggle-border-color;
+  }
+  &:active {
+    background-color: @navbar-default-toggle-icon-bar-bg;
+    border-color: @navbar-default-toggle-border-color;
+  }
+  .dropdown{
+    .circular-icon {
+      width: 40px;
+      height: 40px;
+      margin: -15px 5px;
+      border: 2px solid rgba(129, 122, 122, 0.62);
+      border-radius: 50%;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    .user-accounts-dropdown {
+      min-width: 215px;
+      min-height: 225px;
+      padding: 10px;
+    }
+
+    .user-accounts-dropdown-content {
+      min-height: 155px;
+      margin-bottom: 10px;
+      color: @gray-darker;
+    }
+
+    .user-accounts-dropdown-apps {
+      margin-top: 10px;
+      i { font-size: 45px; }
+    }
+
+    .dropdown-apps-icon {
+      cursor: pointer;
+      display: inline-block;
+      width: 50px;
+      .margin-right(15px);
+      text-align: center;
+      padding: 5px;
+
+      a {
+        color: @gray;
+        text-decoration: none;
+      }
+      a:hover, a:focus {
+        color: @gray-darker;
+        text-decoration: none;
+        background-color: transparent;
+      }
+    }
+
+    .icon-text {
+      position: relative;
+      bottom: 7px;
+      text-align: center;
+      font-size: 10px;
+    }
+
+  }
+
+  .dropdown-menu {
+    border: 1px solid @dropdown-border;
+    margin-top: 13px;
+  }
+
+  .additional-link-container {
+    a {
+      color: @link-color;
+    }
+    a:hover {
+      color: @link-hover-color;
+      background-color: transparent;
+    }
+  }
+}
+
+.navbar-primary-tags {
+  background-color: @navbar-inverse-bg;
+  text-transform: uppercase;
+  line-height: 25px;
+  font-size: 10px;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.navbar-tags  {
+  .padding-left(5px);
+
+  a {
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: (@navbar-padding-vertical + 2px) 2rem;
+    color: @navbar-inverse-link-color;
+  }
+  a:hover {
+    color: @navbar-inverse-link-hover-color;
+    text-decoration: none;
+    background-color: @navbar-inverse-link-hover-bg;
+  }
+  a:active {
+    color: @navbar-inverse-link-active-color;
+    text-decoration: none;
+    background-color: @navbar-inverse-link-active-bg;
+  }
+}
+
+@media only screen and (max-width: @screen-xs-max) {
+  .navbar-tags > a {
+    padding: @navbar-padding-vertical .8rem;
+  }
+  .navbar-accounts {
+    padding-top: (@navbar-padding-vertical + 3px);
+    #logged-in-display-name {
+      display: none;
+    }
+    .dropdown-menu {
+      .right(-60px);
+    }
+  }
+}
+
+
+
+// @import "theme/products/productGrid/productGrid.less"
+.product-grid {
+  *, *:before, *:after {box-sizing:  border-box !important;}
+  .img-responsive {width:100%;}
+  a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+  }
+
+  .product-grid-list {
+   -moz-column-width: @product-grid-columns-size;
+   -webkit-column-width: @product-grid-columns-size;
+   -moz-column-gap: 1em;
+   -webkit-column-gap: 1em;
+   .overlay {
+    color: @product-overlay-text;
+    opacity: 0.7;
+    width: 100%;
+    padding-top: 10px;
+    .currency-symbol {
+      white-space: nowrap;
+      text-decoration: none;
+      text-align: center;
+      }
+    }
+  }
+
+  .product-grid-item {
+    position: relative;
+    display: inline-block;
+    margin:  0.25rem;
+    padding:  1rem;
+    width:  100%;
+    .badge {
+      position: absolute;
+      top: 20px;
+      .left(19px);
+    }
+  }
+
+
+  .product-grid-item-images {
+    padding: 1px;
+    -webkit-box-shadow: 0 0 1px 1px @gray-lighter inset;
+    -moz-box-shadow: 0 0 1px 1px @gray-lighter inset;
+    box-shadow: 0 0 1px 1px @gray-lighter inset;
+  }
+
+  .overlay-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    text-transform: uppercase;
+    font-size: @font-size-base;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .product-grid-controls {
+    position: relative;
+    // bottom: 30px;
+    margin-top: -30px;
+    padding-bottom: 10px;
+    opacity: 0.7;
+    padding-left: 5px;
+    padding-right: 5px;
+    // background-color: black;
+    .delete-product {.float(right);}
+    .clone-product {.margin-left(10px);}
+    .fa {
+      cursor: pointer;
+      padding: 5px
+    }
+  }
+}
+
+
+// @import "theme/products/productList/productList.less"
+.product-list {
+  display: none;
+}
+.product-list-item img {
+  margin-top: 20px;
+}
+
+
+// @import "theme/products/products.less"
